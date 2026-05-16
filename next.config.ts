@@ -1,7 +1,10 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
-  /* config options here */
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // Memaksa browser mengambil aset statis langsung dari server asal Cloudflare
+  assetPrefix: 'https://reverse-web-kedua.elroypedrokameo10.workers.dev',
+  images: {
+    unoptimized: true,
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
